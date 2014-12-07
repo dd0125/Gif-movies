@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+
+  get 'img/' => 'img#index'
+  get 'img/index'
+  
+  get 'img/new'
+  get 'img/:id' => 'img#show'
+  post 'img/' => 'img#update'
+  delete 'img/:id' => 'img#destroy'
+  root 'img#index'
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

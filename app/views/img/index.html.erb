@@ -1,0 +1,40 @@
+<h1>GIF一覧</h1>
+
+<ul class="list-images">
+<% @images.each{ |image| %>
+  <li class="image-item">
+    <a href="/img/<%= image.id %>">
+      <img src="<%= image.url %>"  alt="<%= image.name %>" border="0">
+    </a>
+  </li>
+<% } %>
+</ul>
+
+
+
+
+
+
+
+<style type="text/css">
+<!--
+.list-images {
+  width: 100%; height: 100%;
+}
+
+
+.image-item {
+  display: inline;
+  border: 0px solid;
+  text-align: center;
+  width: 100%; height: 100%;
+}
+
+.image-item img {
+  width:300px;
+  height:200px;
+  
+}
+
+-->
+</style>

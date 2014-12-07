@@ -1,14 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>GifMovies</title>
+  <title>GIF-Movies</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
-
+<div class="main">
+  <div id="page-title">GIF-Movies</div>
+  <div>
+  <ul class="menu">
+    <li><%= link_to "一覧", :action => "index" %></li>
+    <li><%= link_to "新しいGIF", :action => "new" %></li>
+  </ul>
+  </div>
+  <hr class="style-two" />
+  <%= yield %>
+</div>
 </body>
 </html>

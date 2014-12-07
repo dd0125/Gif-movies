@@ -1,0 +1,7 @@
+<h1><%= @image.name %></h1>
+<img src="<%= @image.url %>"  alt="<% @image.name %>" border="0">
+<div>
+views: <%= @viewCount %>
+</div>
+<hr />
+<%= button_to "delete", {:action => 'destroy', :id => @image.id }, :method => :delete %>

@@ -1,0 +1,14 @@
+<h1>新規登録</h1>
+
+<%= form_tag('/img') do %>
+  <div>
+    <%= label :image, :name %> : <%= text_field :image, :name %>
+    <%# error_messages_on :image, :name %>
+  </div>
+  <div>
+    <%= label :image, :url %> : <%= text_field :image, :url %>
+    <%# error_messages_on :image, :url %>
+  </div>
+  
+  <%= submit_tag "post!!" %>
+<% end %>
